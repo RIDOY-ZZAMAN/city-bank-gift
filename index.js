@@ -1,9 +1,15 @@
 const cardDistribution = (Information) => {
-    const districtName = [];
-    Information.map(info => districtName.push(info.district.slice(0, 2).toUpperCase()));
-    const currentYear = []
-    Information.map(info => currentYear.push(info.currentYear.toString().substr(-2)));
-    console.log(currentYear);
+    const newInformatin = []
+    Information.map(info => newInformatin.push({ cardNubmer: info.district.slice(0, 2).toUpperCase().concat(info.currentYear.toString().substr(-2)) }));
+
+
+    console.log(newInformatin)
+
+
+
+
+
+
 
 }
 
