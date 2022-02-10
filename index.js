@@ -1,6 +1,6 @@
 const cardDistribution = (Information) => {
     const newInformatin = []
-    Information.map(info => newInformatin.push({ cardNubmer: info.district.slice(0, 2).toUpperCase().concat(info.currentYear.toString().substr(-2)) }));
+    Information.map(info => newInformatin.push({ cardNubmer: info.district.slice(0, 2).toUpperCase().concat(info.currentYear.toString().substr(-2)).concat(info.postNo.toString().slice(0, 2)).concat(info.birthYear.toString()).concat("000001") }));
 
 
     console.log(newInformatin)
